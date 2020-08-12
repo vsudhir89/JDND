@@ -1,30 +1,33 @@
 package com.udacity.vehicles.service;
 
+import com.udacity.vehicles.client.maps.MapsClient;
+import com.udacity.vehicles.client.prices.PriceClient;
 import com.udacity.vehicles.domain.car.Car;
 import com.udacity.vehicles.domain.car.CarRepository;
 import java.util.List;
 import org.springframework.stereotype.Service;
 
 /**
- * Implements the car service create, read, update or delete
- * information about vehicles, as well as gather related
- * location and price data when desired.
+ * Implements the car service create, read, update or delete information about vehicles, as well as
+ * gather related location and price data when desired.
  */
 @Service
 public class CarService {
 
     private final CarRepository repository;
+    private final PriceClient priceWebClient;
+    private final MapsClient mapsWebClient;
 
-    public CarService(CarRepository repository) {
-        /**
-         * TODO: Add the Maps and Pricing Web Clients you create
-         *   in `VehiclesApiApplication` as arguments and set them here.
-         */
+    public CarService(CarRepository repository, PriceClient priceWebClient,
+            MapsClient mapsWebClient) {
+        this.mapsWebClient = mapsWebClient;
+        this.priceWebClient = priceWebClient;
         this.repository = repository;
     }
 
     /**
      * Gathers a list of all vehicles
+     *
      * @return a list of all vehicles in the CarRepository
      */
     public List<Car> list() {
@@ -33,6 +36,7 @@ public class CarService {
 
     /**
      * Gets car information by ID (or throws exception if non-existent)
+     *
      * @param id the ID number of the car to gather information on
      * @return the requested car's information, including location and price
      */
@@ -52,7 +56,6 @@ public class CarService {
          *   the pricing service each time to get the price.
          */
 
-
         /**
          * TODO: Use the Maps Web client you create in `VehiclesApiApplication`
          *   to get the address for the vehicle. You should access the location
@@ -62,12 +65,12 @@ public class CarService {
          * meaning the Maps service needs to be called each time for the address.
          */
 
-
         return car;
     }
 
     /**
      * Either creates or updates a vehicle, based on prior existence of car
+     *
      * @param car A car object, which can be either new or existing
      * @return the new/updated car is stored in the repository
      */
@@ -86,6 +89,7 @@ public class CarService {
 
     /**
      * Deletes a given car by ID
+     *
      * @param id the ID number of the car to delete
      */
     public void delete(Long id) {
@@ -94,11 +98,9 @@ public class CarService {
          *   If it does not exist, throw a CarNotFoundException
          */
 
-
         /**
          * TODO: Delete the car from the repository.
          */
-
 
     }
 }
