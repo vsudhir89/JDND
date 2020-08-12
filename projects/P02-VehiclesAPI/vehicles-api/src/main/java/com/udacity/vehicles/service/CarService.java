@@ -83,7 +83,7 @@ public class CarService {
      */
     public void delete(Long id) {
         Optional<Car> car = repository.findById(id);
-        if(car.isPresent()) {
+        if (car.isPresent()) {
             Car carToDelete = car.get();
             repository.delete(carToDelete);
         } else {
