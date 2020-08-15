@@ -7,12 +7,10 @@ import static org.mockito.BDDMockito.given;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.json.JsonMapper;
-import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.udacity.vehicles.client.maps.MapsClient;
 import com.udacity.vehicles.client.prices.PriceClient;
 import com.udacity.vehicles.domain.Condition;
@@ -77,6 +75,7 @@ public class CarControllerTest {
 
     /**
      * Tests for successful creation of new car in the system
+     *
      * @throws Exception when car creation fails in the system
      */
     @Test
@@ -92,20 +91,25 @@ public class CarControllerTest {
 
     /**
      * Tests if the read operation appropriately returns a list of vehicles.
+     *
      * @throws Exception if the read operation of the vehicle list fails
      */
     @Test
     public void listCars() throws Exception {
         Car car = getCar();
         car.setId(1L);
-        MockHttpServletResponse mockHttpServletResponse = mvc.perform(get(new URI("/cars")).accept(MediaType.APPLICATION_JSON)).andReturn().getResponse();
+        MockHttpServletResponse mockHttpServletResponse = mvc
+                .perform(get(new URI("/cars")).accept(MediaType.APPLICATION_JSON)).andReturn()
+                .getResponse();
 
         assertThat(mockHttpServletResponse.getStatus()).isEqualTo(HttpStatus.OK.value());
 
         ObjectMapper mapper = new ObjectMapper();
 
-        List<String> returnedCode = mapper.readTree(mockHttpServletResponse.getContentAsString()).findValuesAsText("code");
-        List<String> returnedName = mapper.readTree(mockHttpServletResponse.getContentAsString()).findValuesAsText("name");
+        List<String> returnedCode = mapper.readTree(mockHttpServletResponse.getContentAsString())
+                .findValuesAsText("code");
+        List<String> returnedName = mapper.readTree(mockHttpServletResponse.getContentAsString())
+                .findValuesAsText("name");
         assertEquals(car.getDetails().getManufacturer().getCode().toString(), returnedCode.get(0));
         assertEquals(car.getDetails().getManufacturer().getName(), returnedName.get(0));
 
@@ -113,34 +117,56 @@ public class CarControllerTest {
 
     /**
      * Tests the read operation for a single car by ID.
+     *
      * @throws Exception if the read operation for a single car fails
      */
     @Test
     public void findCar() throws Exception {
         Car car = getCar();
         car.setId(1L);
-        MockHttpServletResponse mockHttpServletResponse = mvc.perform(get(new URI("/cars/1")).accept(MediaType.APPLICATION_JSON)).andReturn().getResponse();
+        MockHttpServletResponse mockHttpServletResponse = mvc
+                .perform(get(new URI("/cars/1")).accept(MediaType.APPLICATION_JSON)).andReturn()
+                .getResponse();
 
         assertThat(mockHttpServletResponse.getStatus()).isEqualTo(HttpStatus.OK.value());
 
         ObjectMapper mapper = new ObjectMapper();
-        List<String> returnedCarNameValues = mapper.readTree(mockHttpServletResponse.getContentAsString()).findValuesAsText("model");
+        List<String> returnedCarNameValues = mapper
+                .readTree(mockHttpServletResponse.getContentAsString()).findValuesAsText("model");
         assertEquals(car.getDetails().getModel(), returnedCarNameValues.get(0));
     }
 
     /**
      * Tests the deletion of a single car by ID.
+     *
      * @throws Exception if the delete operation of a vehicle fails
      */
     @Test
     public void deleteCar() throws Exception {
         Car car = getCar();
         car.setId(1L);
-        mvc.perform( delete(new URI("/cars/1")).accept(MediaType.APPLICATION_JSON)).andExpect(status().isNoContent());
+        mvc.perform(delete(new URI("/cars/1")).accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isNoContent());
+    }
+
+    @Test
+    public void updateCar() throws Exception {
+        Car car = getCar();
+        car.setId(1L);
+
+        car.setCondition(Condition.NEW);
+
+        mvc.perform(put(new URI("/cars/1"))
+                .content(json.write(car).getJson())
+                .contentType(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().is2xxSuccessful());
+
     }
 
     /**
      * Creates an example Car object for use in testing.
+     *
      * @return an example Car object
      */
     private Car getCar() {
