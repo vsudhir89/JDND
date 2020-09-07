@@ -18,7 +18,7 @@ public class ItemController {
     private ItemRepository itemRepository;
 
     @GetMapping
-    public ResponseEntity<List<Item>> getItems() {
+    public ResponseEntity<List<Item>> getAllItems() {
         return ResponseEntity.ok(itemRepository.findAll());
     }
 

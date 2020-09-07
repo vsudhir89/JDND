@@ -17,16 +17,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/order")
 public class OrderController {
 
-
     @Autowired
     private UserRepository userRepository;
 
     @Autowired
     private OrderRepository orderRepository;
 
-
     @PostMapping("/submit/{username}")
-    public ResponseEntity<UserOrder> submit(@PathVariable String username) {
+    public ResponseEntity<UserOrder> submitOrderForUser(@PathVariable String username) {
         User user = userRepository.findByUsername(username);
         if (user == null) {
             return ResponseEntity.notFound().build();
