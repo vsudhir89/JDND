@@ -6,11 +6,6 @@
         <Console name="LogToConsole" target="SYSTEM_OUT">
             <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
         </Console>
-        <File name="LogToFile" fileName="logs/app.log">
-            <PatternLayout>
-                <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
-            </PatternLayout>
-        </File>
     </Appenders>
     <Loggers>
         <Logger name="com.example.demo" level="debug" additivity="false">
@@ -65,7 +60,7 @@
                     10 MegaBytes -->
                 <OnStartupTriggeringPolicy />
                 <SizeBasedTriggeringPolicy
-                        size="10 MB" />
+                        size="25 MB" />
                 <TimeBasedTriggeringPolicy />
             </Policies>
         </RollingFile>
@@ -78,8 +73,8 @@
             <AppenderRef ref="RollingFile" />
         </Root>
 
-        <!-- LOG "com.baeldung*" at TRACE level -->
-        <Logger name="ecommerce.app" level="trace"></Logger>
+        <!-- LOG "com.example.demo" at TRACE level -->
+        <Logger name="com.example.demo" level="info"></Logger>
     </Loggers>
 
 </Configuration>
