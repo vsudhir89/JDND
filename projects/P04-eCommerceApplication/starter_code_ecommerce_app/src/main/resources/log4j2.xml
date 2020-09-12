@@ -55,8 +55,8 @@
         </Console>
 
         <RollingFile name="RollingFile"
-                fileName="./projects/logs/spring-boot-logger-log4j2.log"
-                filePattern="./projects/logs/$${date:yyyy-MM}/spring-boot-logger-log4j2-%d{-dd-MMMM-yyyy}-%i.log.gz">
+                fileName="./projects/P04-eCommerceApplication/starter_code_ecommerce_app/logs/spring-boot-logger-log4j2.log"
+                filePattern="./projects/P04-eCommerceApplication/starter_code_ecommerce_app/logs/$${date:yyyy-MM}/spring-boot-logger-log4j2-%d{-dd-MMMM-yyyy}-%i.log.gz">
             <PatternLayout>
                 <pattern>%d %p %C{1.} [%t] %m%n</pattern>
             </PatternLayout>
