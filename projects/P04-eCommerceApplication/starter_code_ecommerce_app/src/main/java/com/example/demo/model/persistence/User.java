@@ -3,6 +3,7 @@ package com.example.demo.model.persistence;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonProperty.Access;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -27,7 +28,7 @@ public class User {
     private String username;
 
     @Column(nullable = false)
-    @JsonProperty
+    @JsonProperty(access = Access.WRITE_ONLY)
     private String password;
 
     @OneToOne(cascade = CascadeType.ALL)

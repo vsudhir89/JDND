@@ -1,0 +1,29 @@
+2020-09-12 15:42:43,722 INFO o.s.b.StartupInfoLogger [main] Starting ECommerceApplication on Sudhirs-Flipboard-Mac.local with PID 70825 (/Users/sudhirvaidya/Documents/Sandbox/Skills/udacity-java-web-dev/JDND/projects/P04-eCommerce Application/starter_code_ecommerce_app/target/classes started by sudhirvaidya in /Users/sudhirvaidya/Documents/Sandbox/Skills/udacity-java-web-dev/JDND)
+2020-09-12 15:42:43,731 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-09-12 15:42:44,326 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-09-12 15:42:44,397 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 59ms. Found 4 JPA repository interfaces.
+2020-09-12 15:42:45,373 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-09-12 15:42:45,389 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-09-12 15:42:45,390 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2020-09-12 15:42:45,390 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-09-12 15:42:45,485 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-09-12 15:42:45,486 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1671 ms
+2020-09-12 15:42:45,535 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2020-09-12 15:42:45,881 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-09-12 15:42:45,890 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [main] H2 console available at '/h2'. Database available at 'jdbc:h2:mem:bootapp'
+2020-09-12 15:42:46,093 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-09-12 15:42:46,172 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 5.4.20.Final
+2020-09-12 15:42:46,390 INFO o.h.a.c.r.j.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-09-12 15:42:46,570 INFO o.h.d.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-09-12 15:42:47,560 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-09-12 15:42:47,568 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-09-12 15:42:48,022 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-09-12 15:42:48,516 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@550fa96f, org.springframework.security.web.context.SecurityContextPersistenceFilter@56f9de3b, org.springframework.security.web.header.HeaderWriterFilter@4ae49387, org.springframework.web.filter.CorsFilter@54275b5d, org.springframework.security.web.authentication.logout.LogoutFilter@52285a5f, com.example.demo.security.JWTAuthenticationFilter@5d01b0d8, com.example.demo.security.JWTAuthenticationVerificationFilter@271e851e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2b5f8e61, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7f2c995b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@ff21443, org.springframework.security.web.session.SessionManagementFilter@34cf0e80, org.springframework.security.web.access.ExceptionTranslationFilter@16391278, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@693f2c89]
+2020-09-12 15:42:48,630 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-12 15:42:48,859 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-09-12 15:42:48,886 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-09-12 15:42:48,893 INFO o.s.b.StartupInfoLogger [main] Started ECommerceApplication in 5.624 seconds (JVM running for 6.773)
+2020-09-12 15:42:59,462 INFO o.s.s.c.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-12 15:42:59,464 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringContextShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-09-12 15:42:59,467 INFO c.z.h.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown initiated...
+2020-09-12 15:42:59,469 INFO c.z.h.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown completed.
