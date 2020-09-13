@@ -4,8 +4,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import com.example.demo.controllers.UserController;
+import com.example.demo.exception.PasswordInvalidException;
 import com.example.demo.model.persistence.User;
 import com.example.demo.model.requests.CreateUserRequest;
 import javax.transaction.Transactional;
@@ -45,11 +47,7 @@ public class UserControllerTests {
     @Test
     public void testRegisterUserPasswordFail() {
         CreateUserRequest registerUserRequest = getCreateUserRequest(TEST_INVALID_PASSWORD);
-
-        ResponseEntity<User> responseEntity = userController.createUser(registerUserRequest);
-        User registeredUser = responseEntity.getBody();
-        assertNull(registeredUser);
-        assertEquals(responseEntity.getStatusCode(), HttpStatus.BAD_REQUEST);
+        assertThrows(PasswordInvalidException.class, () -> userController.createUser(registerUserRequest));
     }
 
     @Test

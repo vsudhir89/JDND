@@ -5,6 +5,9 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 
 import com.example.demo.model.persistence.User;
 import com.example.demo.model.requests.CreateUserRequest;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.MapperFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import java.net.URI;
 import javax.transaction.Transactional;
 import org.junit.Test;
@@ -46,7 +49,7 @@ public class LoginTests {
     public void testLoginFailedWithoutRegisteredUser() throws Exception {
         MockHttpServletResponse response = mvc
                 .perform(post(new URI("/login"))
-                        .content(userJson.write(getValidUser()).getJson())
+                        .content(getValidUserString())
                         .contentType(MediaType.APPLICATION_JSON)
                         .accept(MediaType.APPLICATION_JSON)).andReturn()
                 .getResponse();
@@ -65,7 +68,7 @@ public class LoginTests {
 
         MockHttpServletResponse response = mvc
                 .perform(post(new URI("/login"))
-                        .content(userJson.write(getValidUser()).getJson())
+                        .content(getValidUserString())
                         .contentType(MediaType.APPLICATION_JSON)
                         .accept(MediaType.APPLICATION_JSON)).andReturn()
                 .getResponse();
@@ -81,10 +84,20 @@ public class LoginTests {
         return registerUserRequest;
     }
 
-    private User getValidUser() {
+    private String getValidUserString() {
         User user = new User();
         user.setUsername(TEST_USERNAME);
         user.setPassword(TEST_VALID_PASSWORD);
-        return user;
+
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.disable(MapperFeature.USE_ANNOTATIONS);
+
+        String disabledAnnotationsUser = null;
+        try {
+            disabledAnnotationsUser = mapper.writeValueAsString(user);
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
+        return disabledAnnotationsUser;
     }
 }

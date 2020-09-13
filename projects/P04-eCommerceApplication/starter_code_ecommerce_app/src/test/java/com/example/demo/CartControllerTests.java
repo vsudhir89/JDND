@@ -10,6 +10,8 @@ import com.example.demo.controllers.UserController;
 import com.example.demo.model.persistence.User;
 import com.example.demo.model.requests.CreateUserRequest;
 import com.example.demo.model.requests.ModifyCartRequest;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.MapperFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.net.URI;
 import java.util.List;
@@ -49,13 +51,16 @@ public class CartControllerTests {
     @Autowired
     private JacksonTester<ModifyCartRequest> cartRequestJacksonTester;
 
+    @Autowired
+    private JacksonTester<CreateUserRequest> userRequestJacksonTester;
+
     private static final String TEST_USERNAME = "testUser";
     private static final String TEST_VALID_PASSWORD = "testPassword!";
 
     @Test
     public void testAddItemToCartSuccessful() throws Exception {
         // Create a user
-        registerUser();
+        MockHttpServletResponse createUserResponse = registerUser();
 
         // Login with that user
         MockHttpServletResponse response = loginWithValidUserAndGetResponse();
@@ -123,15 +128,19 @@ public class CartControllerTests {
                 .getResponse();
     }
 
-    private void registerUser() {
-        CreateUserRequest registerUserRequest = getCreateUserRequest(TEST_VALID_PASSWORD);
-        userController.createUser(registerUserRequest);
+    private MockHttpServletResponse registerUser() throws Exception {
+        return mvc.perform(post(new URI("/api/user/create"))
+                .content(userRequestJacksonTester.write(getCreateUserRequest(TEST_VALID_PASSWORD))
+                        .getJson())
+                .contentType(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON)).andReturn()
+                .getResponse();
     }
 
     private MockHttpServletResponse loginWithValidUserAndGetResponse() throws Exception {
         return mvc
                 .perform(post(new URI("/login"))
-                        .content(userJson.write(getValidUser()).getJson())
+                        .content(getValidUserString())
                         .contentType(MediaType.APPLICATION_JSON)
                         .accept(MediaType.APPLICATION_JSON)).andReturn()
                 .getResponse();
@@ -146,10 +155,20 @@ public class CartControllerTests {
         return registerUserRequest;
     }
 
-    private User getValidUser() {
+    private String getValidUserString() {
         User user = new User();
         user.setUsername(TEST_USERNAME);
         user.setPassword(TEST_VALID_PASSWORD);
-        return user;
+
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.disable(MapperFeature.USE_ANNOTATIONS);
+
+        String disabledAnnotationsUser = null;
+        try {
+            disabledAnnotationsUser = mapper.writeValueAsString(user);
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
+        return disabledAnnotationsUser;
     }
 }
