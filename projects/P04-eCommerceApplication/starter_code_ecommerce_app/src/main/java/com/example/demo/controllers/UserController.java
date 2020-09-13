@@ -61,6 +61,7 @@ public class UserController {
                 userRepository.save(user);
             } else {
                 // Username already present. Avoid duplicate usernames
+                splunkLogger.warn("{} username already exists.", user.getUsername());
                 throw new DuplicateUsernameException(
                         "Username already exists. Please try a different username");
             }
