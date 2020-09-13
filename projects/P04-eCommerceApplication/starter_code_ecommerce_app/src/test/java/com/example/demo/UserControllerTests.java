@@ -90,6 +90,4 @@ public class UserControllerTests {
         registerUserRequest.setConfirmPassword(testValidPassword);
         return registerUserRequest;
     }
-
-
 }
