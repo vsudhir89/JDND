@@ -6,8 +6,8 @@ import com.example.demo.model.persistence.repositories.CartRepository;
 import com.example.demo.model.persistence.repositories.UserRepository;
 import com.example.demo.model.requests.CreateUserRequest;
 import java.util.regex.Pattern;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.*;
+import com.splunk.logging.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -31,7 +31,7 @@ public class UserController {
     @Autowired
     private CartRepository cartRepository;
 
-    private final Logger splunkLogger = LoggerFactory.getLogger(UserController.class.getSimpleName());
+    private final Logger splunkLogger = org.apache.logging.log4j.core.LoggerContext.getContext().getLogger(UserController.class.getSimpleName());
 
     @GetMapping("/id/{id}")
     public ResponseEntity<User> findById(@PathVariable Long id) {
@@ -56,10 +56,10 @@ public class UserController {
             cartRepository.save(cart);
             user.setCart(cart);
             userRepository.save(user);
-            splunkLogger.info("User registered successfully!");
+            splunkLogger.info("{} registered successfully!", user.toString());
             return ResponseEntity.ok(user);
         }
-        splunkLogger.info("User registration failed!!!");
+        splunkLogger.warn("User registration failed!!!");
         return ResponseEntity.badRequest().build();
     }
 
@@ -72,7 +72,7 @@ public class UserController {
             if (password.length() >= 8 && isPasswordEqualToConfirmPassword) {
                 return passwordPattern.matcher(password).find();
             }
-            splunkLogger.info("Password requirements not met");
+            splunkLogger.warn("{} requirements not met", password);
             return false;
         }
         return false;

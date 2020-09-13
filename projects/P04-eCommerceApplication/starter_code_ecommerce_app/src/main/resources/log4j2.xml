@@ -1,47 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<!--
-<Configuration status="DEBUG">
-    <Appenders>
-        <Console name="LogToConsole" target="SYSTEM_OUT">
-            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
-        </Console>
-    </Appenders>
-    <Loggers>
-        <Logger name="com.example.demo" level="debug" additivity="false">
-            <AppenderRef ref="LogToFile"/>
-            <AppenderRef ref="LogToConsole"/>
-        </Logger>
-        <Logger name="org.springframework.boot" level="error" additivity="false">
-            <AppenderRef ref="LogToConsole"/>
-        </Logger>
-        <Root level="error">
-            <AppenderRef ref="LogToFile"/>
-            <AppenderRef ref="LogToConsole"/>
-        </Root>
-    </Loggers>
-</Configuration>-->
-<!--
-<Configuration status="info" name="example" packages="com.example.demo">
-    <Appenders>
-        <SplunkHttp
-                name="httpconf"
-                url="https://localhost:8088/"
-                token="Splunk f8766c22-4829-46ba-9ff9-67a2a251b92d"
-                index="main"
-                disableCertificateValidation="true">
-            <PatternLayout pattern="%m"/>
-        </SplunkHttp>
-    </Appenders>
-
-    <Loggers>
-        <Root level="INFO"/>
-        <Logger name="testSplunkLog4j" level="info">
-            <AppenderRef ref="httpconf"/>
-        </Logger>
-    </Loggers>
-</Configuration>-->
-
 <Configuration>
     <Appenders>
         <Console name="Console" target="SYSTEM_OUT">
@@ -64,6 +21,15 @@
                 <TimeBasedTriggeringPolicy />
             </Policies>
         </RollingFile>
+
+        <SplunkHttp
+                name="httpconf"
+                url="https://localhost:8088"
+                token="f8766c22-4829-46ba-9ff9-67a2a251b92d"
+                index="main"
+                disableCertificateValidation="true">
+            <PatternLayout pattern="%m"/>
+        </SplunkHttp>
     </Appenders>
 
     <Loggers>
@@ -71,6 +37,7 @@
         <Root level="info">
             <AppenderRef ref="Console" />
             <AppenderRef ref="RollingFile" />
+            <AppenderRef ref="httpconf" />
         </Root>
 
         <!-- LOG "com.example.demo" at TRACE level -->

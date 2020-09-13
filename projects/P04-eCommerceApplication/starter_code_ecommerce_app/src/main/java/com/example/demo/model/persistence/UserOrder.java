@@ -79,4 +79,13 @@ public class UserOrder {
         this.total = total;
     }
 
+    @Override
+    public String toString() {
+        return "UserOrder {" +
+                "id=" + id +
+                ", items=" + items +
+                ", user=" + user +
+                ", total=" + total +
+                '}';
+    }
 }

@@ -5,9 +5,8 @@ import com.example.demo.model.persistence.UserOrder;
 import com.example.demo.model.persistence.repositories.OrderRepository;
 import com.example.demo.model.persistence.repositories.UserRepository;
 import java.util.List;
-import java.util.logging.Level;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.*;
+import com.splunk.logging.*;;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,8 +25,7 @@ public class OrderController {
     @Autowired
     private OrderRepository orderRepository;
 
-    private final Logger splunkLogger = LoggerFactory
-            .getLogger(OrderController.class.getSimpleName());
+    private final Logger splunkLogger = org.apache.logging.log4j.core.LoggerContext.getContext().getLogger(UserController.class.getSimpleName());
 
     @PostMapping("/submit/{username}")
     public ResponseEntity<UserOrder> submitOrderForUser(@PathVariable String username) {
@@ -38,7 +36,7 @@ public class OrderController {
         }
         UserOrder order = UserOrder.createFromCart(user.getCart());
         orderRepository.save(order);
-        splunkLogger.info("submit order successful with total ");
+        splunkLogger.info("Submit order successful with total ");
         return ResponseEntity.ok(order);
     }
 
@@ -46,9 +44,10 @@ public class OrderController {
     public ResponseEntity<List<UserOrder>> getOrdersForUser(@PathVariable String username) {
         User user = userRepository.findByUsername(username);
         if (user == null) {
-            splunkLogger.info("get orders failed for username");
+            splunkLogger.warn("Get orders failed for username");
             return ResponseEntity.notFound().build();
         }
+        splunkLogger.info("Get orders for user successful!");
         return ResponseEntity.ok(orderRepository.findByUser(user));
     }
 }
