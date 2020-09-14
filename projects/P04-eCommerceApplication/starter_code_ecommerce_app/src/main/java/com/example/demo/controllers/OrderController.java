@@ -31,7 +31,7 @@ public class OrderController {
     public ResponseEntity<UserOrder> submitOrderForUser(@PathVariable String username) {
         User user = userRepository.findByUsername(username);
         if (user == null) {
-            splunkLogger.info("submit order failed for username");
+            splunkLogger.info("No user with username {} exists", username);
             return ResponseEntity.notFound().build();
         }
         UserOrder order = UserOrder.createFromCart(user.getCart());
@@ -44,10 +44,10 @@ public class OrderController {
     public ResponseEntity<List<UserOrder>> getOrdersForUser(@PathVariable String username) {
         User user = userRepository.findByUsername(username);
         if (user == null) {
-            splunkLogger.warn("Get orders failed for username");
+            splunkLogger.warn("Get orders failed for {}", username);
             return ResponseEntity.notFound().build();
         }
-        splunkLogger.info("Get orders for user successful!");
+        splunkLogger.info("Got orders for {}!", username);
         return ResponseEntity.ok(orderRepository.findByUser(user));
     }
 }
