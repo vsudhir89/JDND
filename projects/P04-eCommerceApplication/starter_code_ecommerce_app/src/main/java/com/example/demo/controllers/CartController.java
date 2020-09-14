@@ -32,7 +32,7 @@ public class CartController {
     @Autowired
     private ItemRepository itemRepository;
 
-    private final Logger splunkLogger = org.apache.logging.log4j.core.LoggerContext.getContext().getLogger(UserController.class.getSimpleName());
+    private final Logger splunkLogger = org.apache.logging.log4j.core.LoggerContext.getContext().getLogger(CartController.class.getSimpleName());
 
     @PostMapping("/addToCart")
     public ResponseEntity<Cart> addToCart(@RequestBody ModifyCartRequest request) {
