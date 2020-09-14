@@ -6,7 +6,7 @@ import com.example.demo.model.persistence.repositories.OrderRepository;
 import com.example.demo.model.persistence.repositories.UserRepository;
 import java.util.List;
 import org.apache.logging.log4j.*;
-import com.splunk.logging.*;;
+import com.splunk.logging.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -9,6 +9,8 @@ import com.example.demo.model.persistence.repositories.UserRepository;
 import com.example.demo.model.requests.ModifyCartRequest;
 import java.util.Optional;
 import java.util.stream.IntStream;
+import org.apache.logging.log4j.Logger;
+import com.splunk.logging.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -30,6 +32,8 @@ public class CartController {
     @Autowired
     private ItemRepository itemRepository;
 
+    private final Logger splunkLogger = org.apache.logging.log4j.core.LoggerContext.getContext().getLogger(UserController.class.getSimpleName());
+
     @PostMapping("/addToCart")
     public ResponseEntity<Cart> addToCart(@RequestBody ModifyCartRequest request) {
         User user = userRepository.findByUsername(request.getUsername());
@@ -44,6 +48,7 @@ public class CartController {
         IntStream.range(0, request.getQuantity())
                 .forEach(i -> cart.addItem(item.get()));
         cartRepository.save(cart);
+        splunkLogger.info("{} items add to cart {}", request.getQuantity(), cart);
         return ResponseEntity.ok(cart);
     }
 
@@ -61,6 +66,7 @@ public class CartController {
         IntStream.range(0, request.getQuantity())
                 .forEach(i -> cart.removeItem(item.get()));
         cartRepository.save(cart);
+        splunkLogger.info("{} items removed, Cart now contains {}", request.getQuantity(), cart);
         return ResponseEntity.ok(cart);
     }
 
