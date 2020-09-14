@@ -48,7 +48,7 @@ public class CartController {
         IntStream.range(0, request.getQuantity())
                 .forEach(i -> cart.addItem(item.get()));
         cartRepository.save(cart);
-        splunkLogger.info("{} items add to cart {}", request.getQuantity(), cart);
+        splunkLogger.info("{} added {} items add to cart {}", user.getUsername(), request.getQuantity(), cart);
         return ResponseEntity.ok(cart);
     }
 
@@ -66,7 +66,7 @@ public class CartController {
         IntStream.range(0, request.getQuantity())
                 .forEach(i -> cart.removeItem(item.get()));
         cartRepository.save(cart);
-        splunkLogger.info("{} items removed, Cart now contains {}", request.getQuantity(), cart);
+        splunkLogger.info("{} removed {} items, Cart now contains {}", user.getUsername(), request.getQuantity(), cart);
         return ResponseEntity.ok(cart);
     }
 

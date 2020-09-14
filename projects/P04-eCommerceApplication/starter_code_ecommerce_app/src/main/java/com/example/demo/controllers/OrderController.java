@@ -36,7 +36,7 @@ public class OrderController {
         }
         UserOrder order = UserOrder.createFromCart(user.getCart());
         orderRepository.save(order);
-        splunkLogger.info("Submit order successful with total ");
+        splunkLogger.info("Submit order successful for {} with total {}", username, order.getTotal());
         return ResponseEntity.ok(order);
     }
 
