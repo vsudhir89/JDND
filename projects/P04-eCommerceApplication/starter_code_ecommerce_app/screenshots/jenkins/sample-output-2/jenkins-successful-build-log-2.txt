@@ -1,0 +1,564 @@
+Started by user jenkinsUdacity
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/JDND - E-commerce app - master
+The recommended git tool is: NONE
+using credential fcecc3dc-087c-4ba7-abd8-4ab2d9c5c3a9
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url git@github.com:vsudhir89/JDND.git # timeout=10
+Fetching upstream changes from git@github.com:vsudhir89/JDND.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.26.2'
+using GIT_SSH to set credentials
+ > git fetch --tags --force --progress -- git@github.com:vsudhir89/JDND.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision a4876e891faf32e3d41472294171d54012ad55e1 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f a4876e891faf32e3d41472294171d54012ad55e1 # timeout=10
+Commit message: "Add jenkins screenshots to jenkins folder"
+ > git rev-list --no-walk a4876e891faf32e3d41472294171d54012ad55e1 # timeout=10
+[JDND - E-commerce app - master] $ mvn -f projects/P04-eCommerceApplication/starter_code_ecommerce_app/pom.xml package
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ----------------------< com.example:auth-course >-----------------------
+[INFO] Building auth-course 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ auth-course ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 2 resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ auth-course ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ auth-course ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /var/jenkins_home/workspace/JDND - E-commerce app - master/projects/P04-eCommerceApplication/starter_code_ecommerce_app/src/test/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ auth-course ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ auth-course ---
+[INFO]
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+2020-09-13T23:56:29,964 INFO  [main] o.s.t.c.s.AbstractTestContextBootstrapper: Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.demo.UserControllerTests], using SpringBootContextLoader
+2020-09-13T23:56:30,017 INFO  [main] o.s.t.c.s.AbstractContextLoader: Could not detect default resource locations for test class [com.example.demo.UserControllerTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-09-13T23:56:30,025 INFO  [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils: Could not detect default configuration classes for test class [com.example.demo.UserControllerTests]: UserControllerTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-09-13T23:56:30,372 INFO  [main] o.s.b.t.c.SpringBootTestContextBootstrapper: Found @SpringBootConfiguration com.example.demo.ECommerceApplication for test class com.example.demo.UserControllerTests
+2020-09-13T23:56:30,559 INFO  [main] o.s.t.c.s.AbstractTestContextBootstrapper: Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-09-13T23:56:30,618 INFO  [main] o.s.t.c.s.AbstractTestContextBootstrapper: Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@52c3cb31, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4b79ac84, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@53941c2f, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6dab9b6d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@21fd5faa, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2766ca9d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5460cf3a, org.springframework.test.context.event.EventPublishingTestExecutionListener@65a15628, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2e6a5539, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@3fc9504b, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6d025197, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@27d4a09, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@7e4204e2, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@b7c4869]
+2020-09-13T23:56:30,716 INFO  [main] o.s.t.c.s.AbstractTestContextBootstrapper: Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.demo.CartControllerTests], using SpringBootContextLoader
+2020-09-13T23:56:30,718 INFO  [main] o.s.t.c.s.AbstractContextLoader: Could not detect default resource locations for test class [com.example.demo.CartControllerTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-09-13T23:56:30,721 INFO  [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils: Could not detect default configuration classes for test class [com.example.demo.CartControllerTests]: CartControllerTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-09-13T23:56:30,746 INFO  [main] o.s.b.t.c.SpringBootTestContextBootstrapper: Found @SpringBootConfiguration com.example.demo.ECommerceApplication for test class com.example.demo.CartControllerTests
+2020-09-13T23:56:31,245 INFO  [main] o.s.t.c.s.AbstractTestContextBootstrapper: Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-09-13T23:56:31,252 INFO  [main] o.s.t.c.s.AbstractTestContextBootstrapper: Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2f17e30d, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3e821657, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1d131e1b, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@71cf1b07, org.springframework.test.context.support.DirtiesContextTestExecutionListener@615091b8, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4fce136b, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4aa83f4f, org.springframework.test.context.event.EventPublishingTestExecutionListener@43b6123e, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@260e86a1, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@19648c40, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@12bd8a64, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@61e94def, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3300f4fd, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@ebb6851]
+2020-09-13T23:56:31,299 INFO  [main] o.s.t.c.s.AbstractTestContextBootstrapper: Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.demo.LoginTests], using SpringBootContextLoader
+2020-09-13T23:56:31,305 INFO  [main] o.s.t.c.s.AbstractContextLoader: Could not detect default resource locations for test class [com.example.demo.LoginTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-09-13T23:56:31,307 INFO  [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils: Could not detect default configuration classes for test class [com.example.demo.LoginTests]: LoginTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-09-13T23:56:31,331 INFO  [main] o.s.b.t.c.SpringBootTestContextBootstrapper: Found @SpringBootConfiguration com.example.demo.ECommerceApplication for test class com.example.demo.LoginTests
+2020-09-13T23:56:31,347 INFO  [main] o.s.t.c.s.AbstractTestContextBootstrapper: Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-09-13T23:56:31,357 INFO  [main] o.s.t.c.s.AbstractTestContextBootstrapper: Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2f48b3d2, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@34f7234e, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@753432a2, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@23bff419, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4983159f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@44e3a2b2, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@101639ae, org.springframework.test.context.event.EventPublishingTestExecutionListener@4c550889, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1d2bd371, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@44040454, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@65fe9e33, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@18bc345, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@42f8285e, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@26bab2f1]
+2020-09-13T23:56:31,379 INFO  [main] o.s.t.c.s.AbstractTestContextBootstrapper: Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.demo.ECommerceApplicationTests], using SpringBootContextLoader
+2020-09-13T23:56:31,383 INFO  [main] o.s.t.c.s.AbstractContextLoader: Could not detect default resource locations for test class [com.example.demo.ECommerceApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-09-13T23:56:31,425 INFO  [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils: Could not detect default configuration classes for test class [com.example.demo.ECommerceApplicationTests]: ECommerceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-09-13T23:56:31,432 INFO  [main] o.s.b.t.c.SpringBootTestContextBootstrapper: Found @SpringBootConfiguration com.example.demo.ECommerceApplication for test class com.example.demo.ECommerceApplicationTests
+2020-09-13T23:56:31,450 INFO  [main] o.s.t.c.s.AbstractTestContextBootstrapper: Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-09-13T23:56:31,457 INFO  [main] o.s.t.c.s.AbstractTestContextBootstrapper: Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6b53bcc2, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@180da663, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@a43ce46, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@340da44c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@424ebba3, org.springframework.test.context.transaction.TransactionalTestExecutionListener@37052337, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2320fa6f, org.springframework.test.context.event.EventPublishingTestExecutionListener@7a560583, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4d722ac9, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@53f0a4cb, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@77a7cf58, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3d97a632, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@616fe72b, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@37efd131]
+2020-09-13T23:56:31,494 INFO  [main] o.s.t.c.s.AbstractTestContextBootstrapper: Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.demo.UserControllerTests], using SpringBootContextLoader
+2020-09-13T23:56:31,496 INFO  [main] o.s.t.c.s.AbstractContextLoader: Could not detect default resource locations for test class [com.example.demo.UserControllerTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-09-13T23:56:31,499 INFO  [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils: Could not detect default configuration classes for test class [com.example.demo.UserControllerTests]: UserControllerTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-09-13T23:56:31,505 INFO  [main] o.s.b.t.c.SpringBootTestContextBootstrapper: Found @SpringBootConfiguration com.example.demo.ECommerceApplication for test class com.example.demo.UserControllerTests
+2020-09-13T23:56:31,514 INFO  [main] o.s.t.c.s.AbstractTestContextBootstrapper: Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-09-13T23:56:31,522 INFO  [main] o.s.t.c.s.AbstractTestContextBootstrapper: Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2d36e77e, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@61c9c3fd, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3b0c9195, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@366c4480, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2c7b5824, org.springframework.test.context.transaction.TransactionalTestExecutionListener@302a07d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5cdd09b1, org.springframework.test.context.event.EventPublishingTestExecutionListener@8c11eee, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@7e8dcdaa, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@681a8b4e, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5cbe877d, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5c08c46a, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4cf8b2dc, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@708400f6]
+2020-09-13T23:56:31,538 INFO  [main] o.s.t.c.s.AbstractTestContextBootstrapper: Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.demo.CartControllerTests], using SpringBootContextLoader
+2020-09-13T23:56:31,545 INFO  [main] o.s.t.c.s.AbstractContextLoader: Could not detect default resource locations for test class [com.example.demo.CartControllerTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-09-13T23:56:31,547 INFO  [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils: Could not detect default configuration classes for test class [com.example.demo.CartControllerTests]: CartControllerTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-09-13T23:56:31,561 INFO  [main] o.s.b.t.c.SpringBootTestContextBootstrapper: Found @SpringBootConfiguration com.example.demo.ECommerceApplication for test class com.example.demo.CartControllerTests
+2020-09-13T23:56:31,567 INFO  [main] o.s.t.c.s.AbstractTestContextBootstrapper: Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-09-13T23:56:31,571 INFO  [main] o.s.t.c.s.AbstractTestContextBootstrapper: Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3668d4, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1c3b9394, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@6f2cfcc2, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7f6f61c8, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4c2cc639, org.springframework.test.context.transaction.TransactionalTestExecutionListener@ccb4b1b, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4097cac, org.springframework.test.context.event.EventPublishingTestExecutionListener@ec2cc4, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2a5b3fee, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7c1e2a2d, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@333dd51e, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@52d645b1, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2101b44a, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@2cc3ad05]
+2020-09-13T23:56:31,589 INFO  [main] o.s.t.c.s.AbstractTestContextBootstrapper: Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.demo.LoginTests], using SpringBootContextLoader
+2020-09-13T23:56:31,591 INFO  [main] o.s.t.c.s.AbstractContextLoader: Could not detect default resource locations for test class [com.example.demo.LoginTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-09-13T23:56:31,592 INFO  [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils: Could not detect default configuration classes for test class [com.example.demo.LoginTests]: LoginTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-09-13T23:56:31,604 INFO  [main] o.s.b.t.c.SpringBootTestContextBootstrapper: Found @SpringBootConfiguration com.example.demo.ECommerceApplication for test class com.example.demo.LoginTests
+2020-09-13T23:56:31,623 INFO  [main] o.s.t.c.s.AbstractTestContextBootstrapper: Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-09-13T23:56:31,627 INFO  [main] o.s.t.c.s.AbstractTestContextBootstrapper: Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@25e2ab5a, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@35e5d0e5, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@73173f63, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@55562aa9, org.springframework.test.context.support.DirtiesContextTestExecutionListener@655ef322, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7e276594, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3401a114, org.springframework.test.context.event.EventPublishingTestExecutionListener@5066d65f, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4233e892, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@77d2e85, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@3ecd267f, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@58ffcbd7, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@555cf22, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@6bb2d00b]
+2020-09-13T23:56:31,638 INFO  [main] o.s.t.c.s.AbstractTestContextBootstrapper: Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.demo.ECommerceApplicationTests], using SpringBootContextLoader
+2020-09-13T23:56:31,641 INFO  [main] o.s.t.c.s.AbstractContextLoader: Could not detect default resource locations for test class [com.example.demo.ECommerceApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-09-13T23:56:31,642 INFO  [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils: Could not detect default configuration classes for test class [com.example.demo.ECommerceApplicationTests]: ECommerceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-09-13T23:56:31,643 INFO  [main] o.s.b.t.c.SpringBootTestContextBootstrapper: Found @SpringBootConfiguration com.example.demo.ECommerceApplication for test class com.example.demo.ECommerceApplicationTests
+2020-09-13T23:56:31,649 INFO  [main] o.s.t.c.s.AbstractTestContextBootstrapper: Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-09-13T23:56:31,652 INFO  [main] o.s.t.c.s.AbstractTestContextBootstrapper: Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1a9c38eb, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@319bc845, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4c5474f5, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2f4205be, org.springframework.test.context.support.DirtiesContextTestExecutionListener@54e22bdd, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3bd418e4, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@544820b7, org.springframework.test.context.event.EventPublishingTestExecutionListener@6b98a075, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2e61d218, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@3569fc08, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@20b12f8a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@e84a8e1, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2e554a3b, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@54a67a45]
+[INFO] Running com.example.demo.UserControllerTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.3.3.RELEASE)
+
+2020-09-13T23:56:32,347 INFO  [main] o.s.b.StartupInfoLogger: Starting UserControllerTests on 65df4810961f with PID 2064 (started by root in /var/jenkins_home/workspace/JDND - E-commerce app - master/projects/P04-eCommerceApplication/starter_code_ecommerce_app)
+2020-09-13T23:56:32,358 INFO  [main] o.s.b.SpringApplication: No active profile set, falling back to default profiles: default
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2020-09-13T23:56:35,856 INFO  [main] o.h.j.i.u.LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-09-13T23:56:35,979 INFO  [main] o.h.Version: HHH000412: Hibernate ORM core version 5.4.20.Final
+2020-09-13T23:56:36,363 INFO  [main] o.h.a.c.r.j.JavaReflectionManager: HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-09-13T23:56:37,134 INFO  [main] o.h.d.Dialect: HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+Hibernate:
+
+    create table cart (
+       id bigint generated by default as identity,
+        total decimal(19,2),
+        primary key (id)
+    )
+Hibernate:
+
+    create table cart_items (
+       cart_id bigint not null,
+        items_id bigint not null
+    )
+Hibernate:
+
+    create table item (
+       id bigint generated by default as identity,
+        description varchar(255) not null,
+        name varchar(255) not null,
+        price decimal(19,2) not null,
+        primary key (id)
+    )
+Hibernate:
+
+    create table user (
+       id bigint generated by default as identity,
+        password varchar(255) not null,
+        username varchar(255) not null,
+        cart_id bigint,
+        primary key (id)
+    )
+Hibernate:
+
+    create table user_order (
+       id bigint generated by default as identity,
+        total decimal(19,2),
+        user_id bigint not null,
+        primary key (id)
+    )
+Hibernate:
+
+    create table user_order_items (
+       user_order_id bigint not null,
+        items_id bigint not null
+    )
+Hibernate:
+
+    alter table user
+       drop constraint if exists UK_sb8bbouer5wak8vyiiy4pf2bx
+Hibernate:
+
+    alter table user
+       add constraint UK_sb8bbouer5wak8vyiiy4pf2bx unique (username)
+Hibernate:
+
+    alter table cart_items
+       add constraint FKbgmrxyvqs3kxt1im75fde3psy
+       foreign key (items_id)
+       references item
+Hibernate:
+
+    alter table cart_items
+       add constraint FK99e0am9jpriwxcm6is7xfedy3
+       foreign key (cart_id)
+       references cart
+Hibernate:
+
+    alter table user
+       add constraint FKtqa69bib34k2c0jhe7afqsao6
+       foreign key (cart_id)
+       references cart
+Hibernate:
+
+    alter table user_order
+       add constraint FKj86u1x7csa8yd68ql2y1ibrou
+       foreign key (user_id)
+       references user
+Hibernate:
+
+    alter table user_order_items
+       add constraint FKghpu6f1jrpho0deyeltq47u2u
+       foreign key (items_id)
+       references item
+Hibernate:
+
+    alter table user_order_items
+       add constraint FKt6k533isn84ef898d6sln1xna
+       foreign key (user_order_id)
+       references user_order
+2020-09-13T23:56:39,310 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-09-13T23:56:39,335 INFO  [main] o.s.o.j.AbstractEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-09-13T23:56:40,733 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-09-13T23:56:41,416 INFO  [main] o.s.s.w.DefaultSecurityFilterChain: Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@62054faf, org.springframework.security.web.context.SecurityContextPersistenceFilter@588d630d, org.springframework.security.web.header.HeaderWriterFilter@7fcc3745, org.springframework.web.filter.CorsFilter@75d539b9, org.springframework.security.web.authentication.logout.LogoutFilter@2c1a8529, com.example.demo.security.JWTAuthenticationFilter@20f63ddc, com.example.demo.security.JWTAuthenticationVerificationFilter@210c1b9d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@459d2ee6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7884f722, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@69bc4024, org.springframework.security.web.session.SessionManagementFilter@4ef31221, org.springframework.security.web.access.ExceptionTranslationFilter@1b19712f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@218f2f51]
+2020-09-13T23:56:42,913 INFO  [main] o.s.s.c.ExecutorConfigurationSupport: Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-13T23:56:43,060 INFO  [main] o.s.b.a.h.H2ConsoleAutoConfiguration: H2 console available at '/h2'. Database available at 'jdbc:h2:mem:bootapp'
+2020-09-13T23:56:43,931 INFO  [main] o.s.b.StartupInfoLogger: Started UserControllerTests in 12.046 seconds (JVM running for 16.974)
+2020-09-13T23:56:44,013 INFO  [main] o.s.t.c.t.TransactionContext: Began transaction (1) for test context [DefaultTestContext@7a34505a testClass = UserControllerTests, testInstance = com.example.demo.UserControllerTests@b787274, testMethod = testFindUserByInvalidUsername@UserControllerTests, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@4ec616d6 testClass = UserControllerTests, locations = '{}', classes = '{class com.example.demo.ECommerceApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7e057f43, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@6440112d, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@305ffe9e, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@4d1bf319, org.springframework.boot.test.context.SpringBootTestArgs@1], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@40b01718]; rollback [true]
+Hibernate:
+    insert
+    into
+        cart
+        (id, total)
+    values
+        (null, ?)
+Hibernate:
+    select
+        user0_.id as id1_3_,
+        user0_.cart_id as cart_id4_3_,
+        user0_.password as password2_3_,
+        user0_.username as username3_3_
+    from
+        user user0_
+    where
+        user0_.username=?
+Hibernate:
+    insert
+    into
+        user
+        (id, cart_id, password, username)
+    values
+        (null, ?, ?, ?)
+2020-09-13T23:56:44,817 INFO  [main] c.e.d.c.UserController: User {id=1, username='testUser', cart=Cart {id=1, items=null, user=null, total=null}} registered successfully!
+Hibernate:
+    select
+        user0_.id as id1_3_,
+        user0_.cart_id as cart_id4_3_,
+        user0_.password as password2_3_,
+        user0_.username as username3_3_
+    from
+        user user0_
+    where
+        user0_.username=?
+2020-09-13T23:56:44,871 INFO  [main] o.s.t.c.t.TransactionContext: Rolled back transaction for test: [DefaultTestContext@7a34505a testClass = UserControllerTests, testInstance = com.example.demo.UserControllerTests@b787274, testMethod = testFindUserByInvalidUsername@UserControllerTests, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@4ec616d6 testClass = UserControllerTests, locations = '{}', classes = '{class com.example.demo.ECommerceApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7e057f43, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@6440112d, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@305ffe9e, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@4d1bf319, org.springframework.boot.test.context.SpringBootTestArgs@1], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]
+2020-09-13T23:56:44,885 INFO  [main] o.s.t.c.t.TransactionContext: Began transaction (1) for test context [DefaultTestContext@7a34505a testClass = UserControllerTests, testInstance = com.example.demo.UserControllerTests@4cb773c5, testMethod = testRegisterUserSuccessful@UserControllerTests, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@4ec616d6 testClass = UserControllerTests, locations = '{}', classes = '{class com.example.demo.ECommerceApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7e057f43, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@6440112d, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@305ffe9e, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@4d1bf319, org.springframework.boot.test.context.SpringBootTestArgs@1], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@40b01718]; rollback [true]
+Hibernate:
+    insert
+    into
+        cart
+        (id, total)
+    values
+        (null, ?)
+Hibernate:
+    select
+        user0_.id as id1_3_,
+        user0_.cart_id as cart_id4_3_,
+        user0_.password as password2_3_,
+        user0_.username as username3_3_
+    from
+        user user0_
+    where
+        user0_.username=?
+Hibernate:
+    insert
+    into
+        user
+        (id, cart_id, password, username)
+    values
+        (null, ?, ?, ?)
+2020-09-13T23:56:45,117 INFO  [main] c.e.d.c.UserController: User {id=2, username='testUser', cart=Cart {id=2, items=null, user=null, total=null}} registered successfully!
+2020-09-13T23:56:45,124 INFO  [main] o.s.t.c.t.TransactionContext: Rolled back transaction for test: [DefaultTestContext@7a34505a testClass = UserControllerTests, testInstance = com.example.demo.UserControllerTests@4cb773c5, testMethod = testRegisterUserSuccessful@UserControllerTests, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@4ec616d6 testClass = UserControllerTests, locations = '{}', classes = '{class com.example.demo.ECommerceApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7e057f43, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@6440112d, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@305ffe9e, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@4d1bf319, org.springframework.boot.test.context.SpringBootTestArgs@1], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]
+2020-09-13T23:56:45,137 INFO  [main] o.s.t.c.t.TransactionContext: Began transaction (1) for test context [DefaultTestContext@7a34505a testClass = UserControllerTests, testInstance = com.example.demo.UserControllerTests@183a508b, testMethod = testRegisterUserPasswordFail@UserControllerTests, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@4ec616d6 testClass = UserControllerTests, locations = '{}', classes = '{class com.example.demo.ECommerceApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7e057f43, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@6440112d, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@305ffe9e, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@4d1bf319, org.springframework.boot.test.context.SpringBootTestArgs@1], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@40b01718]; rollback [true]
+2020-09-13T23:56:45,144 WARN  [main] c.e.d.c.UserController: testPassword! requirements not met
+2020-09-13T23:56:45,151 INFO  [main] o.s.t.c.t.TransactionContext: Rolled back transaction for test: [DefaultTestContext@7a34505a testClass = UserControllerTests, testInstance = com.example.demo.UserControllerTests@183a508b, testMethod = testRegisterUserPasswordFail@UserControllerTests, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@4ec616d6 testClass = UserControllerTests, locations = '{}', classes = '{class com.example.demo.ECommerceApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7e057f43, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@6440112d, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@305ffe9e, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@4d1bf319, org.springframework.boot.test.context.SpringBootTestArgs@1], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]
+2020-09-13T23:56:45,167 INFO  [main] o.s.t.c.t.TransactionContext: Began transaction (1) for test context [DefaultTestContext@7a34505a testClass = UserControllerTests, testInstance = com.example.demo.UserControllerTests@51da7b08, testMethod = testFindUserByValidUsername@UserControllerTests, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@4ec616d6 testClass = UserControllerTests, locations = '{}', classes = '{class com.example.demo.ECommerceApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7e057f43, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@6440112d, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@305ffe9e, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@4d1bf319, org.springframework.boot.test.context.SpringBootTestArgs@1], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@40b01718]; rollback [true]
+Hibernate:
+    insert
+    into
+        cart
+        (id, total)
+    values
+        (null, ?)
+Hibernate:
+    select
+        user0_.id as id1_3_,
+        user0_.cart_id as cart_id4_3_,
+        user0_.password as password2_3_,
+        user0_.username as username3_3_
+    from
+        user user0_
+    where
+        user0_.username=?
+Hibernate:
+    insert
+    into
+        user
+        (id, cart_id, password, username)
+    values
+        (null, ?, ?, ?)
+2020-09-13T23:56:45,393 INFO  [main] c.e.d.c.UserController: User {id=3, username='testUser', cart=Cart {id=3, items=null, user=null, total=null}} registered successfully!
+Hibernate:
+    select
+        user0_.id as id1_3_,
+        user0_.cart_id as cart_id4_3_,
+        user0_.password as password2_3_,
+        user0_.username as username3_3_
+    from
+        user user0_
+    where
+        user0_.username=?
+2020-09-13T23:56:45,413 INFO  [main] o.s.t.c.t.TransactionContext: Rolled back transaction for test: [DefaultTestContext@7a34505a testClass = UserControllerTests, testInstance = com.example.demo.UserControllerTests@51da7b08, testMethod = testFindUserByValidUsername@UserControllerTests, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@4ec616d6 testClass = UserControllerTests, locations = '{}', classes = '{class com.example.demo.ECommerceApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7e057f43, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@6440112d, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@305ffe9e, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@4d1bf319, org.springframework.boot.test.context.SpringBootTestArgs@1], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.639 s - in com.example.demo.UserControllerTests
+[INFO] Running com.example.demo.CartControllerTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.3.3.RELEASE)
+
+2020-09-13T23:56:45,532 INFO  [main] o.s.b.StartupInfoLogger: Starting CartControllerTests on 65df4810961f with PID 2064 (started by root in /var/jenkins_home/workspace/JDND - E-commerce app - master/projects/P04-eCommerceApplication/starter_code_ecommerce_app)
+2020-09-13T23:56:45,541 INFO  [main] o.s.b.SpringApplication: No active profile set, falling back to default profiles: default
+2020-09-13T23:56:46,448 INFO  [main] o.h.j.i.u.LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-09-13T23:56:46,460 INFO  [main] o.h.d.Dialect: HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-09-13T23:56:46,833 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-09-13T23:56:46,835 INFO  [main] o.s.o.j.AbstractEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-09-13T23:56:47,257 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-09-13T23:56:47,513 INFO  [main] o.s.s.w.DefaultSecurityFilterChain: Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6bdad3bb, org.springframework.security.web.context.SecurityContextPersistenceFilter@138b9abe, org.springframework.security.web.header.HeaderWriterFilter@4d793390, org.springframework.web.filter.CorsFilter@73eae5f, org.springframework.security.web.authentication.logout.LogoutFilter@7a364e1c, com.example.demo.security.JWTAuthenticationFilter@4902c584, com.example.demo.security.JWTAuthenticationVerificationFilter@7698a3d9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@279e8bc0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@23ffc910, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4b62f1ba, org.springframework.security.web.session.SessionManagementFilter@3a359f7c, org.springframework.security.web.access.ExceptionTranslationFilter@16745abd, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@38b0e2a7]
+2020-09-13T23:56:47,901 INFO  [main] o.s.s.c.ExecutorConfigurationSupport: Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-13T23:56:47,950 INFO  [main] o.s.b.a.h.H2ConsoleAutoConfiguration: H2 console available at '/h2'. Database available at 'jdbc:h2:mem:bootapp'
+2020-09-13T23:56:48,448 INFO  [main] o.s.m.w.MockServletContext: Initializing Spring TestDispatcherServlet ''
+2020-09-13T23:56:48,448 INFO  [main] o.s.w.s.FrameworkServlet: Initializing Servlet ''
+2020-09-13T23:56:48,484 INFO  [main] o.s.w.s.FrameworkServlet: Completed initialization in 36 ms
+2020-09-13T23:56:48,514 INFO  [main] o.s.b.StartupInfoLogger: Started CartControllerTests in 3.083 seconds (JVM running for 21.557)
+2020-09-13T23:56:48,543 INFO  [main] o.s.t.c.t.TransactionContext: Began transaction (1) for test context [DefaultTestContext@2aac87ab testClass = CartControllerTests, testInstance = com.example.demo.CartControllerTests@c14bbab, testMethod = testRemoveItemFromCartSuccessful@CartControllerTests, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@72c5064f testClass = CartControllerTests, locations = '{}', classes = '{class com.example.demo.ECommerceApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[[ImportsContextCustomizer@4a0c04ab key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration, org.springframework.boot.test.autoconfigure.json.JsonTestersAutoConfiguration, org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration, org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration, org.springframework.boot.autoconfigure.jsonb.JsonbAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7e057f43, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@6440112d, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@305ffe9e, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@bd404f5e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@4d1bf319, org.springframework.boot.test.context.SpringBootTestArgs@1], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@6f740044]; rollback [true]
+Hibernate:
+    insert
+    into
+        cart
+        (id, total)
+    values
+        (null, ?)
+Hibernate:
+    select
+        user0_.id as id1_3_,
+        user0_.cart_id as cart_id4_3_,
+        user0_.password as password2_3_,
+        user0_.username as username3_3_
+    from
+        user user0_
+    where
+        user0_.username=?
+Hibernate:
+    insert
+    into
+        user
+        (id, cart_id, password, username)
+    values
+        (null, ?, ?, ?)
+2020-09-13T23:56:49,162 INFO  [main] c.e.d.c.UserController: User {id=4, username='testUser', cart=Cart {id=4, items=null, user=null, total=null}} registered successfully!
+Hibernate:
+    select
+        user0_.id as id1_3_,
+        user0_.cart_id as cart_id4_3_,
+        user0_.password as password2_3_,
+        user0_.username as username3_3_
+    from
+        user user0_
+    where
+        user0_.username=?
+Hibernate:
+    select
+        user0_.id as id1_3_,
+        user0_.cart_id as cart_id4_3_,
+        user0_.password as password2_3_,
+        user0_.username as username3_3_
+    from
+        user user0_
+    where
+        user0_.username=?
+Hibernate:
+    select
+        item0_.id as id1_2_0_,
+        item0_.description as descript2_2_0_,
+        item0_.name as name3_2_0_,
+        item0_.price as price4_2_0_
+    from
+        item item0_
+    where
+        item0_.id=?
+Hibernate:
+    select
+        user0_.id as id1_3_,
+        user0_.cart_id as cart_id4_3_,
+        user0_.password as password2_3_,
+        user0_.username as username3_3_
+    from
+        user user0_
+    where
+        user0_.username=?
+2020-09-13T23:56:49,838 INFO  [main] o.s.t.c.t.TransactionContext: Rolled back transaction for test: [DefaultTestContext@2aac87ab testClass = CartControllerTests, testInstance = com.example.demo.CartControllerTests@c14bbab, testMethod = testRemoveItemFromCartSuccessful@CartControllerTests, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@72c5064f testClass = CartControllerTests, locations = '{}', classes = '{class com.example.demo.ECommerceApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[[ImportsContextCustomizer@4a0c04ab key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration, org.springframework.boot.test.autoconfigure.json.JsonTestersAutoConfiguration, org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration, org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration, org.springframework.boot.autoconfigure.jsonb.JsonbAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7e057f43, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@6440112d, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@305ffe9e, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@bd404f5e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@4d1bf319, org.springframework.boot.test.context.SpringBootTestArgs@1], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]
+2020-09-13T23:56:49,852 INFO  [main] o.s.t.c.t.TransactionContext: Began transaction (1) for test context [DefaultTestContext@2aac87ab testClass = CartControllerTests, testInstance = com.example.demo.CartControllerTests@140cfc5f, testMethod = testAddItemToCartSuccessful@CartControllerTests, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@72c5064f testClass = CartControllerTests, locations = '{}', classes = '{class com.example.demo.ECommerceApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[[ImportsContextCustomizer@4a0c04ab key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration, org.springframework.boot.test.autoconfigure.json.JsonTestersAutoConfiguration, org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration, org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration, org.springframework.boot.autoconfigure.jsonb.JsonbAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7e057f43, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@6440112d, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@305ffe9e, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@bd404f5e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@4d1bf319, org.springframework.boot.test.context.SpringBootTestArgs@1], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@6f740044]; rollback [true]
+Hibernate:
+    insert
+    into
+        cart
+        (id, total)
+    values
+        (null, ?)
+Hibernate:
+    select
+        user0_.id as id1_3_,
+        user0_.cart_id as cart_id4_3_,
+        user0_.password as password2_3_,
+        user0_.username as username3_3_
+    from
+        user user0_
+    where
+        user0_.username=?
+Hibernate:
+    insert
+    into
+        user
+        (id, cart_id, password, username)
+    values
+        (null, ?, ?, ?)
+2020-09-13T23:56:49,997 INFO  [main] c.e.d.c.UserController: User {id=5, username='testUser', cart=Cart {id=5, items=null, user=null, total=null}} registered successfully!
+Hibernate:
+    select
+        user0_.id as id1_3_,
+        user0_.cart_id as cart_id4_3_,
+        user0_.password as password2_3_,
+        user0_.username as username3_3_
+    from
+        user user0_
+    where
+        user0_.username=?
+Hibernate:
+    select
+        user0_.id as id1_3_,
+        user0_.cart_id as cart_id4_3_,
+        user0_.password as password2_3_,
+        user0_.username as username3_3_
+    from
+        user user0_
+    where
+        user0_.username=?
+Hibernate:
+    select
+        item0_.id as id1_2_0_,
+        item0_.description as descript2_2_0_,
+        item0_.name as name3_2_0_,
+        item0_.price as price4_2_0_
+    from
+        item item0_
+    where
+        item0_.id=?
+2020-09-13T23:56:50,414 INFO  [main] o.s.t.c.t.TransactionContext: Rolled back transaction for test: [DefaultTestContext@2aac87ab testClass = CartControllerTests, testInstance = com.example.demo.CartControllerTests@140cfc5f, testMethod = testAddItemToCartSuccessful@CartControllerTests, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@72c5064f testClass = CartControllerTests, locations = '{}', classes = '{class com.example.demo.ECommerceApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[[ImportsContextCustomizer@4a0c04ab key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration, org.springframework.boot.test.autoconfigure.json.JsonTestersAutoConfiguration, org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration, org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration, org.springframework.boot.autoconfigure.jsonb.JsonbAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7e057f43, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@6440112d, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@305ffe9e, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@bd404f5e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@4d1bf319, org.springframework.boot.test.context.SpringBootTestArgs@1], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.929 s - in com.example.demo.CartControllerTests
+[INFO] Running com.example.demo.LoginTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.3.3.RELEASE)
+
+2020-09-13T23:56:50,551 INFO  [main] o.s.b.StartupInfoLogger: Starting LoginTests on 65df4810961f with PID 2064 (started by root in /var/jenkins_home/workspace/JDND - E-commerce app - master/projects/P04-eCommerceApplication/starter_code_ecommerce_app)
+2020-09-13T23:56:50,553 INFO  [main] o.s.b.SpringApplication: No active profile set, falling back to default profiles: default
+2020-09-13T23:58:06,532 INFO  [main] o.h.j.i.u.LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-09-13T23:58:06,548 INFO  [main] o.h.d.Dialect: HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-09-13T23:58:07,187 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-09-13T23:58:07,196 INFO  [main] o.s.o.j.AbstractEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-09-13T23:58:08,026 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-09-13T23:58:08,688 INFO  [main] o.s.s.w.DefaultSecurityFilterChain: Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2318651f, org.springframework.security.web.context.SecurityContextPersistenceFilter@208b8425, org.springframework.security.web.header.HeaderWriterFilter@4a45ff31, org.springframework.web.filter.CorsFilter@3f04fb07, org.springframework.security.web.authentication.logout.LogoutFilter@6334c0d8, com.example.demo.security.JWTAuthenticationFilter@4718d320, com.example.demo.security.JWTAuthenticationVerificationFilter@46aea9f7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3ec52163, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5b1cedfd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@267e0ca0, org.springframework.security.web.session.SessionManagementFilter@7af7c9aa, org.springframework.security.web.access.ExceptionTranslationFilter@705dc1a6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@43d84df1]
+2020-09-13T23:58:09,335 INFO  [main] o.s.s.c.ExecutorConfigurationSupport: Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-13T23:58:09,396 INFO  [main] o.s.b.a.h.H2ConsoleAutoConfiguration: H2 console available at '/h2'. Database available at 'jdbc:h2:mem:bootapp'
+2020-09-13T23:58:09,799 INFO  [main] o.s.m.w.MockServletContext: Initializing Spring TestDispatcherServlet ''
+2020-09-13T23:58:09,804 INFO  [main] o.s.w.s.FrameworkServlet: Initializing Servlet ''
+2020-09-13T23:58:09,910 INFO  [main] o.s.w.s.FrameworkServlet: Completed initialization in 98 ms
+2020-09-13T23:58:09,932 INFO  [main] o.s.b.StartupInfoLogger: Started LoginTests in 79.479 seconds (JVM running for 102.973)
+2020-09-13T23:58:09,962 INFO  [main] o.s.t.c.t.TransactionContext: Began transaction (1) for test context [DefaultTestContext@492d38a2 testClass = LoginTests, testInstance = com.example.demo.LoginTests@3fc2e100, testMethod = testLoginFailedWithoutRegisteredUser@LoginTests, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@31885b4b testClass = LoginTests, locations = '{}', classes = '{class com.example.demo.ECommerceApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[[ImportsContextCustomizer@638e8194 key = [@org.springframework.boot.test.autoconfigure.json.AutoConfigureJsonTesters(enabled=true), @org.springframework.boot.autoconfigure.EnableAutoConfiguration(exclude=[class org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration], excludeName=[]), @org.springframework.context.annotation.Import(value=[class org.springframework.boot.autoconfigure.ImportAutoConfigurationImportSelector]), @org.apiguardian.api.API(consumers=[*], since=5.0, status=STABLE), @org.springframework.boot.test.context.SpringBootTest(args=[], webEnvironment=MOCK, value=[], properties=[], classes=[]), @org.springframework.test.context.BootstrapWith(value=class org.springframework.boot.test.context.SpringBootTestContextBootstrapper), @org.springframework.boot.test.autoconfigure.properties.PropertyMapping(value=spring.test.jsontesters, skip=NO), @javax.transaction.Transactional(value=REQUIRED, dontRollbackOn=[], rollbackOn=[]), @org.springframework.context.annotation.Import(value=[class org.springframework.boot.autoconfigure.AutoConfigurationPackages$Registrar]), @org.junit.runner.RunWith(value=class org.springframework.test.context.junit4.SpringRunner), @org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc(webDriverEnabled=true, print=DEFAULT, webClientEnabled=true, addFilters=true, printOnlyOnFailure=true), @org.springframework.boot.autoconfigure.ImportAutoConfiguration(value=[], exclude=[], classes=[]), @org.springframework.context.annotation.Import(value=[class org.springframework.boot.autoconfigure.AutoConfigurationImportSelector]), @org.springframework.boot.test.autoconfigure.properties.PropertyMapping(value=spring.test.mockmvc, skip=NO), @org.springframework.boot.autoconfigure.AutoConfigurationPackage(basePackages=[], basePackageClasses=[]), @org.junit.jupiter.api.extension.ExtendWith(value=[class org.springframework.test.context.junit.jupiter.SpringExtension])]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7e057f43, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@6440112d, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@305ffe9e, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@bd404f5e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@4d1bf319, org.springframework.boot.test.context.SpringBootTestArgs@1], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@6bc08a77]; rollback [true]
+Hibernate:
+    select
+        user0_.id as id1_3_,
+        user0_.cart_id as cart_id4_3_,
+        user0_.password as password2_3_,
+        user0_.username as username3_3_
+    from
+        user user0_
+    where
+        user0_.username=?
+2020-09-13T23:58:10,463 INFO  [main] o.s.t.c.t.TransactionContext: Rolled back transaction for test: [DefaultTestContext@492d38a2 testClass = LoginTests, testInstance = com.example.demo.LoginTests@3fc2e100, testMethod = testLoginFailedWithoutRegisteredUser@LoginTests, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@31885b4b testClass = LoginTests, locations = '{}', classes = '{class com.example.demo.ECommerceApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[[ImportsContextCustomizer@638e8194 key = [@org.springframework.boot.test.autoconfigure.json.AutoConfigureJsonTesters(enabled=true), @org.springframework.boot.autoconfigure.EnableAutoConfiguration(exclude=[class org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration], excludeName=[]), @org.springframework.context.annotation.Import(value=[class org.springframework.boot.autoconfigure.ImportAutoConfigurationImportSelector]), @org.apiguardian.api.API(consumers=[*], since=5.0, status=STABLE), @org.springframework.boot.test.context.SpringBootTest(args=[], webEnvironment=MOCK, value=[], properties=[], classes=[]), @org.springframework.test.context.BootstrapWith(value=class org.springframework.boot.test.context.SpringBootTestContextBootstrapper), @org.springframework.boot.test.autoconfigure.properties.PropertyMapping(value=spring.test.jsontesters, skip=NO), @javax.transaction.Transactional(value=REQUIRED, dontRollbackOn=[], rollbackOn=[]), @org.springframework.context.annotation.Import(value=[class org.springframework.boot.autoconfigure.AutoConfigurationPackages$Registrar]), @org.junit.runner.RunWith(value=class org.springframework.test.context.junit4.SpringRunner), @org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc(webDriverEnabled=true, print=DEFAULT, webClientEnabled=true, addFilters=true, printOnlyOnFailure=true), @org.springframework.boot.autoconfigure.ImportAutoConfiguration(value=[], exclude=[], classes=[]), @org.springframework.context.annotation.Import(value=[class org.springframework.boot.autoconfigure.AutoConfigurationImportSelector]), @org.springframework.boot.test.autoconfigure.properties.PropertyMapping(value=spring.test.mockmvc, skip=NO), @org.springframework.boot.autoconfigure.AutoConfigurationPackage(basePackages=[], basePackageClasses=[]), @org.junit.jupiter.api.extension.ExtendWith(value=[class org.springframework.test.context.junit.jupiter.SpringExtension])]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7e057f43, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@6440112d, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@305ffe9e, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@bd404f5e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@4d1bf319, org.springframework.boot.test.context.SpringBootTestArgs@1], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]
+2020-09-13T23:58:10,479 INFO  [main] o.s.t.c.t.TransactionContext: Began transaction (1) for test context [DefaultTestContext@492d38a2 testClass = LoginTests, testInstance = com.example.demo.LoginTests@5b5f61cc, testMethod = testLoginResponseContainsBearerToken@LoginTests, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@31885b4b testClass = LoginTests, locations = '{}', classes = '{class com.example.demo.ECommerceApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[[ImportsContextCustomizer@638e8194 key = [@org.springframework.boot.test.autoconfigure.json.AutoConfigureJsonTesters(enabled=true), @org.springframework.boot.autoconfigure.EnableAutoConfiguration(exclude=[class org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration], excludeName=[]), @org.springframework.context.annotation.Import(value=[class org.springframework.boot.autoconfigure.ImportAutoConfigurationImportSelector]), @org.apiguardian.api.API(consumers=[*], since=5.0, status=STABLE), @org.springframework.boot.test.context.SpringBootTest(args=[], webEnvironment=MOCK, value=[], properties=[], classes=[]), @org.springframework.test.context.BootstrapWith(value=class org.springframework.boot.test.context.SpringBootTestContextBootstrapper), @org.springframework.boot.test.autoconfigure.properties.PropertyMapping(value=spring.test.jsontesters, skip=NO), @javax.transaction.Transactional(value=REQUIRED, dontRollbackOn=[], rollbackOn=[]), @org.springframework.context.annotation.Import(value=[class org.springframework.boot.autoconfigure.AutoConfigurationPackages$Registrar]), @org.junit.runner.RunWith(value=class org.springframework.test.context.junit4.SpringRunner), @org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc(webDriverEnabled=true, print=DEFAULT, webClientEnabled=true, addFilters=true, printOnlyOnFailure=true), @org.springframework.boot.autoconfigure.ImportAutoConfiguration(value=[], exclude=[], classes=[]), @org.springframework.context.annotation.Import(value=[class org.springframework.boot.autoconfigure.AutoConfigurationImportSelector]), @org.springframework.boot.test.autoconfigure.properties.PropertyMapping(value=spring.test.mockmvc, skip=NO), @org.springframework.boot.autoconfigure.AutoConfigurationPackage(basePackages=[], basePackageClasses=[]), @org.junit.jupiter.api.extension.ExtendWith(value=[class org.springframework.test.context.junit.jupiter.SpringExtension])]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7e057f43, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@6440112d, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@305ffe9e, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@bd404f5e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@4d1bf319, org.springframework.boot.test.context.SpringBootTestArgs@1], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@6bc08a77]; rollback [true]
+Hibernate:
+    insert
+    into
+        cart
+        (id, total)
+    values
+        (null, ?)
+Hibernate:
+    select
+        user0_.id as id1_3_,
+        user0_.cart_id as cart_id4_3_,
+        user0_.password as password2_3_,
+        user0_.username as username3_3_
+    from
+        user user0_
+    where
+        user0_.username=?
+Hibernate:
+    insert
+    into
+        user
+        (id, cart_id, password, username)
+    values
+        (null, ?, ?, ?)
+2020-09-13T23:58:10,787 INFO  [main] c.e.d.c.UserController: User {id=6, username='testUser', cart=Cart {id=6, items=null, user=null, total=null}} registered successfully!
+Hibernate:
+    select
+        user0_.id as id1_3_,
+        user0_.cart_id as cart_id4_3_,
+        user0_.password as password2_3_,
+        user0_.username as username3_3_
+    from
+        user user0_
+    where
+        user0_.username=?
+2020-09-13T23:58:10,985 INFO  [main] o.s.t.c.t.TransactionContext: Rolled back transaction for test: [DefaultTestContext@492d38a2 testClass = LoginTests, testInstance = com.example.demo.LoginTests@5b5f61cc, testMethod = testLoginResponseContainsBearerToken@LoginTests, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@31885b4b testClass = LoginTests, locations = '{}', classes = '{class com.example.demo.ECommerceApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[[ImportsContextCustomizer@638e8194 key = [@org.springframework.boot.test.autoconfigure.json.AutoConfigureJsonTesters(enabled=true), @org.springframework.boot.autoconfigure.EnableAutoConfiguration(exclude=[class org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration], excludeName=[]), @org.springframework.context.annotation.Import(value=[class org.springframework.boot.autoconfigure.ImportAutoConfigurationImportSelector]), @org.apiguardian.api.API(consumers=[*], since=5.0, status=STABLE), @org.springframework.boot.test.context.SpringBootTest(args=[], webEnvironment=MOCK, value=[], properties=[], classes=[]), @org.springframework.test.context.BootstrapWith(value=class org.springframework.boot.test.context.SpringBootTestContextBootstrapper), @org.springframework.boot.test.autoconfigure.properties.PropertyMapping(value=spring.test.jsontesters, skip=NO), @javax.transaction.Transactional(value=REQUIRED, dontRollbackOn=[], rollbackOn=[]), @org.springframework.context.annotation.Import(value=[class org.springframework.boot.autoconfigure.AutoConfigurationPackages$Registrar]), @org.junit.runner.RunWith(value=class org.springframework.test.context.junit4.SpringRunner), @org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc(webDriverEnabled=true, print=DEFAULT, webClientEnabled=true, addFilters=true, printOnlyOnFailure=true), @org.springframework.boot.autoconfigure.ImportAutoConfiguration(value=[], exclude=[], classes=[]), @org.springframework.context.annotation.Import(value=[class org.springframework.boot.autoconfigure.AutoConfigurationImportSelector]), @org.springframework.boot.test.autoconfigure.properties.PropertyMapping(value=spring.test.mockmvc, skip=NO), @org.springframework.boot.autoconfigure.AutoConfigurationPackage(basePackages=[], basePackageClasses=[]), @org.junit.jupiter.api.extension.ExtendWith(value=[class org.springframework.test.context.junit.jupiter.SpringExtension])]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7e057f43, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@6440112d, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@305ffe9e, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@bd404f5e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@4d1bf319, org.springframework.boot.test.context.SpringBootTestArgs@1], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 80.527 s - in com.example.demo.LoginTests
+[INFO] Running com.example.demo.ECommerceApplicationTests
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.19 s - in com.example.demo.ECommerceApplicationTests
+2020-09-13T23:58:11,369 INFO  [SpringContextShutdownHook] o.s.s.c.ExecutorConfigurationSupport: Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-13T23:58:11,369 INFO  [SpringContextShutdownHook] o.s.s.c.ExecutorConfigurationSupport: Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-13T23:58:11,370 INFO  [SpringContextShutdownHook] o.s.s.c.ExecutorConfigurationSupport: Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-13T23:58:11,379 INFO  [SpringContextShutdownHook] o.s.o.j.AbstractEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-09-13T23:58:11,379 INFO  [SpringContextShutdownHook] o.s.o.j.AbstractEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-09-13T23:58:11,379 INFO  [SpringContextShutdownHook] o.s.o.j.AbstractEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO]
+[INFO] Results:
+[INFO]
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0
+[INFO]
+[INFO]
+[INFO] --- maven-jar-plugin:3.1.1:jar (default-jar) @ auth-course ---
+[INFO] Building jar: /var/jenkins_home/workspace/JDND - E-commerce app - master/projects/P04-eCommerceApplication/starter_code_ecommerce_app/target/auth-course-0.0.1-SNAPSHOT.jar
+[INFO]
+[INFO] --- spring-boot-maven-plugin:2.3.3.RELEASE:repackage (repackage) @ auth-course ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:52 min
+[INFO] Finished at: 2020-09-13T23:58:15Z
+[INFO] ------------------------------------------------------------------------
+Finished: SUCCESS
