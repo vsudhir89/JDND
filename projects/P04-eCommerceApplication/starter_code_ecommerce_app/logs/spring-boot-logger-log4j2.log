@@ -1,29 +1,22 @@
-2020-09-12 15:49:14,971 INFO o.s.b.StartupInfoLogger [main] Starting ECommerceApplication on Sudhirs-Flipboard-Mac.local with PID 71152 (/Users/sudhirvaidya/Documents/Sandbox/Skills/udacity-java-web-dev/JDND/projects/P04-eCommerceApplication/starter_code_ecommerce_app/target/classes started by sudhirvaidya in /Users/sudhirvaidya/Documents/Sandbox/Skills/udacity-java-web-dev/JDND)
-2020-09-12 15:49:14,982 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
-2020-09-12 15:49:15,575 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2020-09-12 15:49:15,624 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 42ms. Found 4 JPA repository interfaces.
-2020-09-12 15:49:16,470 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
-2020-09-12 15:49:16,487 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
-2020-09-12 15:49:16,488 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
-2020-09-12 15:49:16,489 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.37]
-2020-09-12 15:49:16,588 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
-2020-09-12 15:49:16,588 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1490 ms
-2020-09-12 15:49:16,636 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
-2020-09-12 15:49:16,868 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
-2020-09-12 15:49:16,875 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [main] H2 console available at '/h2'. Database available at 'jdbc:h2:mem:bootapp'
-2020-09-12 15:49:17,072 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-09-12 15:49:17,121 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 5.4.20.Final
-2020-09-12 15:49:17,261 INFO o.h.a.c.r.j.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-09-12 15:49:17,402 INFO o.h.d.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2020-09-12 15:49:18,221 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-09-12 15:49:18,228 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-09-12 15:49:18,730 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-09-12 15:49:19,174 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@ff21443, org.springframework.security.web.context.SecurityContextPersistenceFilter@73b0ed03, org.springframework.security.web.header.HeaderWriterFilter@56f9de3b, org.springframework.web.filter.CorsFilter@61e14b53, org.springframework.security.web.authentication.logout.LogoutFilter@60f9dc7e, com.example.demo.security.JWTAuthenticationFilter@31b6b0c7, com.example.demo.security.JWTAuthenticationVerificationFilter@6253e59a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@27db45f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1ed9d173, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7d1cb59f, org.springframework.security.web.session.SessionManagementFilter@2b5f8e61, org.springframework.security.web.access.ExceptionTranslationFilter@34cf0e80, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@28ce75ec]
-2020-09-12 15:49:19,285 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
-2020-09-12 15:49:19,517 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
-2020-09-12 15:49:19,546 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
-2020-09-12 15:49:19,555 INFO o.s.b.StartupInfoLogger [main] Started ECommerceApplication in 4.937 seconds (JVM running for 5.703)
-2020-09-12 15:49:23,540 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-09-12 15:49:23,540 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
-2020-09-12 15:49:23,566 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 26 ms
-2020-09-12 15:49:23,898 INFO c.e.d.c.UserController [http-nio-8080-exec-2] User registered successfully!
+2020-09-13 17:06:55,123 INFO o.s.b.StartupInfoLogger [main] Starting ECommerceApplication on Sudhirs-Flipboard-Mac.local with PID 46818 (/Users/sudhirvaidya/Documents/Sandbox/Skills/udacity-java-web-dev/ecommApp/projects/P04-eCommerceApplication/starter_code_ecommerce_app/target/classes started by sudhirvaidya in /Users/sudhirvaidya/Documents/Sandbox/Skills/udacity-java-web-dev/ecommApp)
+2020-09-13 17:06:55,135 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-09-13 17:06:56,703 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-09-13 17:06:56,833 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1623 ms
+2020-09-13 17:06:57,131 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [main] H2 console available at '/h2'. Database available at 'jdbc:h2:mem:bootapp'
+2020-09-13 17:06:57,279 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-09-13 17:06:57,344 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 5.4.20.Final
+2020-09-13 17:06:57,525 INFO o.h.a.c.r.j.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-09-13 17:06:57,660 INFO o.h.d.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-09-13 17:06:58,406 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-09-13 17:06:58,552 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-09-13 17:06:59,007 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-09-13 17:06:59,348 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@27234b7c, org.springframework.security.web.context.SecurityContextPersistenceFilter@29bf90fc, org.springframework.security.web.header.HeaderWriterFilter@5eae392d, org.springframework.web.filter.CorsFilter@125a8ab6, org.springframework.security.web.authentication.logout.LogoutFilter@862624f, com.example.demo.security.JWTAuthenticationFilter@792b9dd3, com.example.demo.security.JWTAuthenticationVerificationFilter@cbc3bf3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@32121140, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4fe9adfb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@31f9f9b3, org.springframework.security.web.session.SessionManagementFilter@3e1c5e0d, org.springframework.security.web.access.ExceptionTranslationFilter@56b48163, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@37ab1b10]
+2020-09-13 17:06:59,461 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-13 17:06:59,687 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-09-13 17:06:59,697 INFO o.s.b.StartupInfoLogger [main] Started ECommerceApplication in 4.989 seconds (JVM running for 6.027)
+2020-09-13 17:07:08,689 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-09-13 17:07:08,713 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 19 ms
+2020-09-13 17:07:09,729 INFO c.e.d.c.UserController [http-nio-8080-exec-1] User {id=1, username='sudhir', cart=Cart {id=1, items=null, user=null, total=null}} registered successfully!
+2020-09-13 17:07:18,261 WARN c.e.d.c.UserController [http-nio-8080-exec-3] sudhir username already exists.
+2020-09-13 17:07:19,519 WARN c.e.d.c.UserController [http-nio-8080-exec-5] sudhir username already exists.
+2020-09-13 17:07:35,237 INFO c.e.d.c.OrderController [http-nio-8080-exec-10] Submit order successful with total 
